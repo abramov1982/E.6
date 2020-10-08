@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  app:
+    image: flask_in_docker:v0.1
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+  redis:
+    image: redis:6.0.8
